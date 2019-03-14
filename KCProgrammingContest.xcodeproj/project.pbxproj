@@ -12,6 +12,12 @@
 		DA0B136F2239E6BF0077FA0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0B136D2239E6BF0077FA0C /* Main.storyboard */; };
 		DA0B13712239E6C00077FA0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA0B13702239E6C00077FA0C /* Assets.xcassets */; };
 		DA0B13742239E6C00077FA0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0B13722239E6C00077FA0C /* LaunchScreen.storyboard */; };
+		DA0B137E2239F52A0077FA0C /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B137D2239F52A0077FA0C /* Types.swift */; };
+		DA0B1380223A094D0077FA0C /* StudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B137F223A094D0077FA0C /* StudentsViewController.swift */; };
+		DA0B1382223A099E0077FA0C /* NewSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B1381223A099E0077FA0C /* NewSchoolViewController.swift */; };
+		DA0B1384223A09B60077FA0C /* NewTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B1383223A09B60077FA0C /* NewTeamViewController.swift */; };
+		DA0B1386223A09D50077FA0C /* SchoolsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B1385223A09D50077FA0C /* SchoolsTableViewController.swift */; };
+		DA0B1388223A09F80077FA0C /* TeamsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B1387223A09F80077FA0C /* TeamsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		DA0B13702239E6C00077FA0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA0B13732239E6C00077FA0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA0B13752239E6C00077FA0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA0B137D2239F52A0077FA0C /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		DA0B137F223A094D0077FA0C /* StudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsViewController.swift; sourceTree = "<group>"; };
+		DA0B1381223A099E0077FA0C /* NewSchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSchoolViewController.swift; sourceTree = "<group>"; };
+		DA0B1383223A09B60077FA0C /* NewTeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTeamViewController.swift; sourceTree = "<group>"; };
+		DA0B1385223A09D50077FA0C /* SchoolsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsTableViewController.swift; sourceTree = "<group>"; };
+		DA0B1387223A09F80077FA0C /* TeamsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +69,15 @@
 				DA0B13692239E6BF0077FA0C /* AppDelegate.swift */,
 				DA0B136B2239E6BF0077FA0C /* ViewController.swift */,
 				DA0B136D2239E6BF0077FA0C /* Main.storyboard */,
+				DA0B1387223A09F80077FA0C /* TeamsTableViewController.swift */,
+				DA0B1385223A09D50077FA0C /* SchoolsTableViewController.swift */,
+				DA0B1383223A09B60077FA0C /* NewTeamViewController.swift */,
+				DA0B1381223A099E0077FA0C /* NewSchoolViewController.swift */,
+				DA0B137F223A094D0077FA0C /* StudentsViewController.swift */,
 				DA0B13702239E6C00077FA0C /* Assets.xcassets */,
 				DA0B13722239E6C00077FA0C /* LaunchScreen.storyboard */,
 				DA0B13752239E6C00077FA0C /* Info.plist */,
+				DA0B137D2239F52A0077FA0C /* Types.swift */,
 			);
 			path = KCProgrammingContest;
 			sourceTree = "<group>";
@@ -135,7 +153,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA0B1382223A099E0077FA0C /* NewSchoolViewController.swift in Sources */,
+				DA0B1380223A094D0077FA0C /* StudentsViewController.swift in Sources */,
+				DA0B1388223A09F80077FA0C /* TeamsTableViewController.swift in Sources */,
+				DA0B137E2239F52A0077FA0C /* Types.swift in Sources */,
+				DA0B1386223A09D50077FA0C /* SchoolsTableViewController.swift in Sources */,
 				DA0B136C2239E6BF0077FA0C /* ViewController.swift in Sources */,
+				DA0B1384223A09B60077FA0C /* NewTeamViewController.swift in Sources */,
 				DA0B136A2239E6BF0077FA0C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
