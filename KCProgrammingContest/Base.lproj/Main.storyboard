@@ -86,11 +86,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="schoolcell" textLabel="woq-fE-HHl" detailTextLabel="ySt-vF-3JA" style="IBUITableViewCellStyleSubtitle" id="euA-lb-XK7">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="schoolCell" textLabel="woq-fE-HHl" detailTextLabel="ySt-vF-3JA" style="IBUITableViewCellStyleSubtitle" id="euA-lb-XK7">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="euA-lb-XK7" id="G8o-9y-cZB">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="woq-fE-HHl">
@@ -109,20 +109,23 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Mvq-Ru-uk7" kind="show" identifier="schoolData" id="D9o-vd-xNe"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="zl0-Ud-EAg" id="7gE-ka-9qY"/>
-                            <outlet property="delegate" destination="zl0-Ud-EAg" id="ddu-9Y-ytb"/>
+                            <outlet property="dataSource" destination="zl0-Ud-EAg" id="Vfl-M8-Li2"/>
+                            <outlet property="delegate" destination="zl0-Ud-EAg" id="wxQ-mc-PfW"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Schools" id="UWa-21-aLP">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JcG-fZ-7uU"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JcG-fZ-7uU">
+                            <connections>
+                                <segue destination="ePy-VO-gsy" kind="presentation" identifier="newSchool" id="hwl-e4-ToA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="Mvq-Ru-uk7" kind="show" id="xsf-ZD-ons"/>
-                        <segue destination="ePy-VO-gsy" kind="presentation" id="cj9-2V-5n5"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dyb-cx-KpC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -153,13 +156,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="teams" id="Cne-in-TXk">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="teams" id="Cne-in-TXk">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cne-in-TXk" id="Gyx-yq-C4A">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="TeamData" id="Y4z-iv-avm"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -168,12 +174,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Teams" id="LuH-S5-F6v">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vn0-lp-4pZ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vn0-lp-4pZ">
+                            <connections>
+                                <segue destination="MDJ-t2-rs1" kind="presentation" identifier="NewTeamData" id="Umu-di-3gs"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="MDJ-t2-rs1" kind="presentation" id="Myc-AI-5U1"/>
-                        <segue destination="BYZ-38-t0r" kind="show" id="0dg-In-1vU"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLY-kp-zwr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -341,7 +347,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wWo-oT-pYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1077.5999999999999" y="778.56071964017997"/>
+            <point key="canvasLocation" x="1062" y="838"/>
         </scene>
     </scenes>
 </document>

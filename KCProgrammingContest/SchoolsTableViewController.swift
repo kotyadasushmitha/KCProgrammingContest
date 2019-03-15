@@ -57,8 +57,7 @@ class SchoolsTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // Override to support editing the table view.
+    /*choo    // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
@@ -96,7 +95,7 @@ class SchoolsTableViewController: UITableViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "School Details"{
+        if segue.identifier == "schoolData"{
             let schoolDetailsVC = segue.destination as! TeamsTableViewController
             schoolDetailsVC.school = Schools.shared[tableView.indexPathForSelectedRow!.row]
         }
