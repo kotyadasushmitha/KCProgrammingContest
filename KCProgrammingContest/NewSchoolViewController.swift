@@ -39,7 +39,9 @@ class NewSchoolViewController: UIViewController {
         let schoolName = schoolNameTF.text!
         let coachName = coachNameTF.text!
         
-        Schools.shared.add(school: School(name: schoolName, coach: coachName))
+       // Schools.shared.add(school: School(name: schoolName, coach: coachName))
+        Schools.shared.saveSchool(name: schoolName, coach: coachName)
+        print(schoolName)
         self.dismiss(animated: true, completion: nil)
         
     }

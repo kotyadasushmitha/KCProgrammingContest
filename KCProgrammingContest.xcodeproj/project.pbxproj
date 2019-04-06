@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E1FB6B01115A009E6914757 /* Pods_KCProgrammingContest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FD217A2AD66C1B5CEABEB7 /* Pods_KCProgrammingContest.framework */; };
 		DA0B136A2239E6BF0077FA0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B13692239E6BF0077FA0C /* AppDelegate.swift */; };
 		DA0B136C2239E6BF0077FA0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B136B2239E6BF0077FA0C /* ViewController.swift */; };
 		DA0B136F2239E6BF0077FA0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0B136D2239E6BF0077FA0C /* Main.storyboard */; };
@@ -21,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51A5381C0938B504A3EB0B7A /* Pods-KCProgrammingContest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KCProgrammingContest.release.xcconfig"; path = "Pods/Target Support Files/Pods-KCProgrammingContest/Pods-KCProgrammingContest.release.xcconfig"; sourceTree = "<group>"; };
+		BCE16E457D7B237EF9FD62CC /* Pods-KCProgrammingContest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KCProgrammingContest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KCProgrammingContest/Pods-KCProgrammingContest.debug.xcconfig"; sourceTree = "<group>"; };
+		C5FD217A2AD66C1B5CEABEB7 /* Pods_KCProgrammingContest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KCProgrammingContest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0B13662239E6BF0077FA0C /* KCProgrammingContest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KCProgrammingContest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA0B13692239E6BF0077FA0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA0B136B2239E6BF0077FA0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E1FB6B01115A009E6914757 /* Pods_KCProgrammingContest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BA83A15926EE78A361FC775 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCE16E457D7B237EF9FD62CC /* Pods-KCProgrammingContest.debug.xcconfig */,
+				51A5381C0938B504A3EB0B7A /* Pods-KCProgrammingContest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CB3D3D9AF12E9C2523ED6B45 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5FD217A2AD66C1B5CEABEB7 /* Pods_KCProgrammingContest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DA0B135D2239E6BF0077FA0C = {
 			isa = PBXGroup;
 			children = (
 				DA0B13682239E6BF0077FA0C /* KCProgrammingContest */,
 				DA0B13672239E6BF0077FA0C /* Products */,
+				3BA83A15926EE78A361FC775 /* Pods */,
+				CB3D3D9AF12E9C2523ED6B45 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,9 +113,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA0B13782239E6C00077FA0C /* Build configuration list for PBXNativeTarget "KCProgrammingContest" */;
 			buildPhases = (
+				ED3359C8AC3AE3E4E1C54B44 /* [CP] Check Pods Manifest.lock */,
 				DA0B13622239E6BF0077FA0C /* Sources */,
 				DA0B13632239E6BF0077FA0C /* Frameworks */,
 				DA0B13642239E6BF0077FA0C /* Resources */,
+				D43D10E1EC11A2694EE08E69 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,6 +173,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D43D10E1EC11A2694EE08E69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KCProgrammingContest/Pods-KCProgrammingContest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KCProgrammingContest/Pods-KCProgrammingContest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED3359C8AC3AE3E4E1C54B44 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KCProgrammingContest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA0B13622239E6BF0077FA0C /* Sources */ = {
@@ -304,6 +379,7 @@
 		};
 		DA0B13792239E6C00077FA0C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE16E457D7B237EF9FD62CC /* Pods-KCProgrammingContest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -314,6 +390,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nwmissouri.edu.KCProgrammingContest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -321,6 +398,7 @@
 		};
 		DA0B137A2239E6C00077FA0C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51A5381C0938B504A3EB0B7A /* Pods-KCProgrammingContest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -331,6 +409,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = nwmissouri.edu.KCProgrammingContest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -12,7 +12,7 @@ class SchoolsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        Schools.shared.retrieveAllSchools()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -28,6 +28,7 @@ class SchoolsTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        Schools.shared.retrieveAllSchools()
         tableView.reloadData()
     }
 
@@ -104,7 +105,7 @@ class SchoolsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            Schools.shared.delete(school: Schools.shared[indexPath.row] )
+            Schools.shared.deleteSchool(school: Schools.shared[indexPath.row] )
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }

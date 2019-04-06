@@ -21,11 +21,7 @@ class NewTeamViewController: UIViewController {
     
     var school: School!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    
     
 
     @IBAction func done(_ sender: Any) {
@@ -34,14 +30,52 @@ class NewTeamViewController: UIViewController {
         let student1 = student1TF.text!
         let student2 = student2TF.text!
         
-        school.addTeam(name: teamName, students: [student0, student1, student2])
-        self.dismiss(animated: true, completion: nil)
         
+        self.dismiss(animated: true, completion: nil)
+        if teamNameTF.text!.count != 0 && student0TF.text!.count != 0 && student1TF.text!.count != 0 && student2TF.text!.count != 0 {
+            Schools.shared.saveTeamForSelectedSchool(school: school, team: Team(name: teamName, students: [student0, student1, student2]))
+            self.dismiss(animated: true, completion: nil)
+            
+        } else if teamNameTF.text!.count != 0 {
+            displayMessage(fieldName: "Name")
+            
+        } else if student0TF.text!.count != 0 {
+            displayMessage(fieldName: "Student 0")
+            
+        } else if student1TF.text!.count != 0 {
+            displayMessage(fieldName: "Student 1")
+            
+        } else if student2TF.text!.count != 0 {
+            displayMessage(fieldName: "Student 2")
+            
+        }
+        
+    }
+    
+    func displayMessage(fieldName: String){
+        
+        let alert = UIAlertController(title: "Note",
+                                      
+                                      message: "Please enter a value in \(fieldName) text field.",
+            
+            preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .default,
+                                      
+                                      handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
         
     }
     
     @IBAction func cancel(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
     }
     /*
     // MARK: - Navigation
